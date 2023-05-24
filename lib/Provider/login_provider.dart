@@ -4,7 +4,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:salman_first_project/book_reading.dart';
 
 class LoginProvider extends ChangeNotifier {
-  // login with google
   Future<void> handleGoogleLogin(BuildContext context) async {
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
     if (googleUser != null) {
@@ -23,7 +22,6 @@ class LoginProvider extends ChangeNotifier {
         }));
       });
     } else {
-      // Navigator.pop(context);
       return;
     }
   }
